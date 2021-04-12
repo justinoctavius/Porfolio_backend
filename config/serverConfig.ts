@@ -7,11 +7,10 @@ export default function (routes) {
   //middlewares
   apiRoutes.use(express.json());
 
-  console.log('hola putos');
-
   //routes
   setRoutes.use('/user', routes.userRoute);
   setRoutes.use('/work', routes.workRoute);
+  setRoutes.use('/study', routes.studyRoute);
 
   apiRoutes.use('/api', setRoutes);
   return apiRoutes;

@@ -22,7 +22,7 @@ class ProjectModel extends Model implements IProjectModel {
   project_id: string;
 
   @Column({ allowNull: false })
-  date: number;
+  date: Date;
 
   @Column({ allowNull: false })
   name: string;

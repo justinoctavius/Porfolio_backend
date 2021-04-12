@@ -3,19 +3,21 @@ import IStudy from '../interfaces/IStudy';
 
 class Study implements IStudy {
   study_id: string;
+  user_id: string;
   name: string;
-  date: number;
+  date: Date;
   description: string;
   certificate: ICertificate;
   place: string;
 
   constructor(
     name: string,
-    date: number,
+    date: Date,
     description: string,
     place: string,
-    certificate: ICertificate,
-    study_id: string
+    study_id: string,
+    user_id: string = '',
+    certificate?: ICertificate
   ) {
     this.name = name;
     this.date = date;
@@ -23,6 +25,7 @@ class Study implements IStudy {
     this.certificate = certificate;
     this.place = place;
     this.study_id = study_id;
+    this.user_id = user_id;
   }
 }
 

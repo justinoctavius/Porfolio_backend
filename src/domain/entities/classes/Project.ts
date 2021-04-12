@@ -6,14 +6,14 @@ import ITechnology from '../interfaces/ITechnology';
 class Project implements IProject {
   project_id: string;
   name: string;
-  date: number;
+  date: Date;
   technologies: ITechnology[];
   links: ILink[];
   images: IImage[];
 
   constructor(
     name: string,
-    date: number,
+    date: Date,
     technologies: ITechnology[],
     images: IImage[],
     links: ILink[],

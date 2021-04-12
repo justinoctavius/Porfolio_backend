@@ -2,9 +2,10 @@ import ICertificate from './ICertificate';
 
 interface IStudy {
   study_id: string;
+  user_id: string;
   name: string;
   description: string;
-  date: number;
+  date: Date;
   place: string;
   certificate: ICertificate;
 }

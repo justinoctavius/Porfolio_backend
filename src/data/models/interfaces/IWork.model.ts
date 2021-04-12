@@ -4,7 +4,7 @@ interface IWorkModel {
   work_id: string;
   user_id: string;
   name: string;
-  date: number;
+  date: Date;
   description: string;
   user: IUserModel;
 }

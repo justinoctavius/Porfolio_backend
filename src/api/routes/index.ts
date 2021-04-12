@@ -1,4 +1,5 @@
-import userRoutes from './user.routes';
-import workRoutes from './work.routes';
+import userRoute from './user.routes';
+import workRoute from './work.routes';
+import studyRoute from './study.routes';
 
-export { userRoutes, workRoutes };
+export { userRoute, workRoute, studyRoute };

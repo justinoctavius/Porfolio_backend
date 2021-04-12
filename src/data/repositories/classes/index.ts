@@ -1,5 +1,5 @@
 import WorkRepository from './Work.repository';
 import UserRepository from './User.repository';
-import Repository from './Repository';
+import StudyRepository from './Study.repository';
 
-export { UserRepository, WorkRepository, Repository };
+export { UserRepository, WorkRepository, StudyRepository };

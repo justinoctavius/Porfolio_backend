@@ -5,7 +5,7 @@ import ITechnology from './ITechnology';
 interface IProject {
   project_id: string;
   name: string;
-  date: number;
+  date: Date;
   links: ILink[];
   images: IImage[];
   technologies: ITechnology[];

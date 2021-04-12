@@ -22,8 +22,8 @@ class StudyModel extends Model implements IStudyModel {
   @Column({ allowNull: false })
   description: string;
 
-  @Column({ allowNull: false })
-  date: number;
+  @Column({ type: DataType.DATE, allowNull: false })
+  date: Date;
 
   @Column({ allowNull: false })
   place: string;

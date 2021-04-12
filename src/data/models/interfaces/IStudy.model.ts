@@ -7,7 +7,7 @@ interface IStudyModel {
   user: IUserModel;
   name: string;
   description: string;
-  date: number;
+  date: Date;
   place: string;
   certificate: ICertificateModel;
 }

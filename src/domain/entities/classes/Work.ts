@@ -4,11 +4,11 @@ class Work implements IWork {
   work_id: string;
   user_id: string;
   name: string;
-  date: number;
+  date: Date;
   description: string;
   constructor(
     name: string,
-    date: number,
+    date: Date,
     description: string,
     work_id: string,
     user_id?: string

@@ -16,32 +16,37 @@ const container = createContainer();
 //routes
 container.register({
   apiRoutes: asFunction(config.apiRoutes).singleton(),
-  userRoute: asFunction(routes.userRoutes).singleton(),
-  workRoute: asFunction(routes.workRoutes).singleton(),
+  userRoute: asFunction(routes.userRoute).singleton(),
+  workRoute: asFunction(routes.workRoute).singleton(),
+  studyRoute: asFunction(routes.studyRoute).singleton(),
 });
 
 //controllers
 container.register({
   userController: asClass(controllers.UserController).singleton(),
   workController: asClass(controllers.WorkController).singleton(),
+  studyController: asClass(controllers.StudyController).singleton(),
 });
 
 //services
 container.register({
   userService: asClass(services.UserService).singleton(),
   workService: asClass(services.WorkService).singleton(),
+  studyService: asClass(services.StudyService).singleton(),
 });
 
 //repositories
 container.register({
   userRepository: asClass(repository.UserRepository).singleton(),
   workRepository: asClass(repository.WorkRepository).singleton(),
+  studyRepository: asClass(repository.StudyRepository).singleton(),
 });
 
 //mappers
 container.register({
   userMapper: asClass(mappers.UserMapper).singleton(),
   workMapper: asClass(mappers.WorkMapper).singleton(),
+  studyMapper: asClass(mappers.StudyMapper).singleton(),
 });
 
 //app

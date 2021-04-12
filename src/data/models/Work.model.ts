@@ -18,7 +18,7 @@ class WorkModel extends Model implements IWorkModel {
   name: string;
 
   @Column({ allowNull: false })
-  date: number;
+  date: Date;
 
   @Column({ allowNull: false })
   description: string;

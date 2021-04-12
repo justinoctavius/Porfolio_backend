@@ -1,4 +1,4 @@
 import IUserController from './IUser.controller';
-import IWorkController from './IWork.controller';
+import IController from './IController';
 
-export { IUserController, IWorkController };
+export { IUserController, IController };

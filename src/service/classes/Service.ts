@@ -14,7 +14,6 @@ abstract class Service<T> implements IService {
 
   async getAllAsync(): Promise<Object> {
     try {
-      console.log('services working!!');
       const entities: T[] = await this._repository.getAllAsync();
       const entitiesDto = entities.map((entity) =>
         this._response._mapper.toDto(entity)

@@ -1,31 +1,33 @@
 import { Request, Response } from 'express';
-import { IService } from '../../../service/interfaces';
+import { IService } from '../../../service';
 import { IController } from '../interfaces';
 
-class WorkController implements IController {
-  private _workService: IService;
-  constructor({ workService }) {
-    this._workService = workService;
+class StudyController implements IController {
+  private _studyService: IService;
+  constructor({ studyService }) {
+    this._studyService = studyService;
   }
+
   async getAllAsync(req: Request, res: Response): Promise<void> {
-    const response: any = await this._workService.getAllAsync();
+    const response: any = await this._studyService.getAllAsync();
     res.status(response.status).json(response);
   }
   async getOneAsync(req: Request, res: Response): Promise<void> {
-    const { work_id } = req.params;
-    const response: any = await this._workService.getOneAsync(work_id);
+    const { study_id } = req.params;
+    const response: any = await this._studyService.getOneAsync(study_id);
     res.status(response.status).json(response);
   }
   async deleteAsync(req: Request, res: Response): Promise<void> {
-    const { work_id } = req.params;
-    const response: any = await this._workService.deleteAsync(work_id);
+    const { study_id } = req.params;
+    const response: any = await this._studyService.deleteAsync(study_id);
     res.status(response.status).json(response);
   }
   async addAsync(req: Request, res: Response): Promise<void> {
     const { user_id } = req.params;
-    const { name, date, description } = req.body;
-    const response: any = await this._workService.addAsync({
+    const { place, name, date, description } = req.body;
+    const response: any = await this._studyService.addAsync({
       user_id,
+      place,
       name,
       date,
       description,
@@ -33,9 +35,10 @@ class WorkController implements IController {
     res.status(response.status).json(response);
   }
   async updateAsync(req: Request, res: Response): Promise<void> {
-    const { work_id } = req.params;
-    const { name, date, description } = req.body;
-    const response: any = await this._workService.updateAsync(work_id, {
+    const { study_id } = req.params;
+    const { place, name, date, description } = req.body;
+    const response: any = await this._studyService.updateAsync(study_id, {
+      place,
       name,
       date,
       description,
@@ -44,4 +47,4 @@ class WorkController implements IController {
   }
 }
 
-export default WorkController;
+export default StudyController;

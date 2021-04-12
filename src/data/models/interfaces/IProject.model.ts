@@ -6,7 +6,7 @@ import IUserModel from './IUser.model';
 interface IProjectModel {
   project_id: string;
   user_id: string;
-  date: number;
+  date: Date;
   name: string;
   links: ILinkModel[];
   images: IImageModel[];
