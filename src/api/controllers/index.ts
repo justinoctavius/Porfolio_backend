@@ -1,5 +1,15 @@
-import { StudyController, UserController, WorkController } from './classes/';
+import {
+  StudyController,
+  TechnologyController,
+  UserController,
+  WorkController,
+} from './classes/';
 import { IUserController, IController } from './interfaces';
 
-export { UserController, WorkController, StudyController };
+export {
+  UserController,
+  WorkController,
+  StudyController,
+  TechnologyController,
+};
 export { IUserController, IController };

@@ -11,6 +11,7 @@ export default function (routes) {
   setRoutes.use('/user', routes.userRoute);
   setRoutes.use('/work', routes.workRoute);
   setRoutes.use('/study', routes.studyRoute);
+  setRoutes.use('/tech', routes.techRoute);
 
   apiRoutes.use('/api', setRoutes);
   return apiRoutes;
