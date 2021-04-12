@@ -1,5 +1,5 @@
 import { UserService, WorkService } from './classes/';
-import { IUserService, IWorkService } from './interfaces';
+import { IService, IUserService } from './interfaces';
 
 export { UserService, WorkService };
-export { IUserService, IWorkService };
+export { IUserService, IService };

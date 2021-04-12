@@ -1,21 +1,31 @@
 import { IWork } from '../../../domain/entities';
-import { IWorkRepository } from '../interfaces';
+import WorkModel from '../../models/Work.model';
+import Repository from './Repository';
 
-class WorkRepository implements IWorkRepository {
-  getAllAsync(): Promise<void> {
-    throw new Error('Method not implemented.');
+class WorkRepository extends Repository<IWork> {
+  constructor({ workMapper }) {
+    super(WorkModel, workMapper);
   }
-  getOneAsync(work_id: string): Promise<void> {
-    throw new Error('Method not implemented.');
+  async addAsync(work: IWork): Promise<IWork> {
+    const workAdded = await this._model.create({
+      name: work.name,
+      description: work.description,
+      work_id: work.work_id,
+      date: work.date,
+      user_id: work.user_id,
+    });
+    return this._mapper.toDomain(workAdded);
   }
-  deleteAsync(work_id: string): Promise<void> {
-    throw new Error('Method not implemented.');
-  }
-  addAsync(work: IWork): Promise<void> {
-    throw new Error('Method not implemented.');
-  }
-  updateAsync(work: IWork): Promise<void> {
-    throw new Error('Method not implemented.');
+  async updateAsync(work: IWork): Promise<IWork> {
+    const workToUpdate = await this._model.findByPk(work.work_id);
+    if (!workToUpdate) return null;
+
+    workToUpdate.name = work.name;
+    workToUpdate.description = work.description;
+    workToUpdate.date = work.date;
+
+    await workToUpdate.save();
+    return this._mapper.toDomain(workToUpdate);
   }
 }
 

@@ -1,3 +1,4 @@
-import userMapper from './user.mapper';
+import UserMapper from './User.mapper';
+import WorkMapper from './Work.mapper';
 
-export { userMapper };
+export { UserMapper, WorkMapper };
