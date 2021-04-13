@@ -1,4 +1,5 @@
 import {
+  ImageController,
   StudyController,
   TechnologyController,
   UserController,
@@ -11,5 +12,6 @@ export {
   WorkController,
   StudyController,
   TechnologyController,
+  ImageController,
 };
 export { IUserController, IController };

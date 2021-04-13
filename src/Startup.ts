@@ -1,6 +1,6 @@
 import config from '../config';
 import Server from './api/Server';
-import { IUserService } from './service';
+import { IUserService } from './services';
 
 class Startup {
   private _server: Server;

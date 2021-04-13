@@ -15,10 +15,12 @@ abstract class Repository<T> implements IRepository<T> {
   }
   async getOneAsync(id: string): Promise<T> {
     const entity = await this._model.findByPk(id);
+    if (!entity) return null;
     return this._mapper.toDomain(entity);
   }
   async deleteAsync(id: string): Promise<T> {
     const entity = await this._model.findByPk(id);
+    if (!entity) return null;
     await entity.destroy();
     return this._mapper.toDomain(entity);
   }

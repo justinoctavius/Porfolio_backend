@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { IService } from '../../../service/interfaces';
+import { IService } from '../../../services/interfaces';
 import { IController } from '../interfaces';
 
 class WorkController implements IController {

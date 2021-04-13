@@ -1,3 +1,4 @@
+import ImageController from './Image.controller';
 import StudyController from './Study.controller';
 import TechnologyController from './Technology.controller';
 import UserController from './User.controller';
@@ -8,4 +9,5 @@ export {
   WorkController,
   StudyController,
   TechnologyController,
+  ImageController,
 };

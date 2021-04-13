@@ -1,7 +1,7 @@
 import { JWTUtils, ResponseUtil } from '../../utils';
 import { IUserRepository } from '../../data/repositories';
 import { IUserService } from '../interfaces';
-import { User, IUser } from '../../domain/entities/';
+import { User, IUser } from '../../domain/entities';
 import * as uuid from 'uuid';
 
 class UserService implements IUserService {

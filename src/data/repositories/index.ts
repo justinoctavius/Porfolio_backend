@@ -1,4 +1,5 @@
 import {
+  ImageRepository,
   StudyRepository,
   TechnologyRepository,
   UserRepository,
@@ -11,5 +12,6 @@ export {
   WorkRepository,
   StudyRepository,
   TechnologyRepository,
+  ImageRepository,
 };
 export { IUserRepository, IRepository };

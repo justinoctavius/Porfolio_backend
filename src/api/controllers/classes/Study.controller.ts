@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { IService } from '../../../service';
+import { IService } from '../../../services';
 import { IController } from '../interfaces';
 
 class StudyController implements IController {
