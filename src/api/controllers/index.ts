@@ -1,5 +1,8 @@
 import {
+  CertificateController,
   ImageController,
+  LinkController,
+  ProjectController,
   StudyController,
   TechnologyController,
   UserController,
@@ -13,5 +16,8 @@ export {
   StudyController,
   TechnologyController,
   ImageController,
+  CertificateController,
+  ProjectController,
+  LinkController,
 };
 export { IUserController, IController };

@@ -9,6 +9,7 @@ interface IProject {
   links: ILink[];
   images: IImage[];
   technologies: ITechnology[];
+  user_id: string;
 }
 
 export default IProject;

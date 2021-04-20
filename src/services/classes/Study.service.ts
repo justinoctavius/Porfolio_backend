@@ -16,7 +16,7 @@ class StudyService extends Service<IStudy> {
       return this._response.response('success', 200, studyAdded);
     } catch (error) {
       console.log(error);
-      this._response.response('Unable to add', 500);
+      return this._response.response('Unable to add', 500);
     }
   }
   async updateAsync(
@@ -27,10 +27,10 @@ class StudyService extends Service<IStudy> {
       const study = new Study(name, date, description, place, id);
       const studyUpdated = await this._repository.updateAsync(study);
       if (!studyUpdated) return this._response.response('Study not found', 404);
-      return this._response.response('sucess', 200, studyUpdated);
+      return this._response.response('success', 200, studyUpdated);
     } catch (error) {
       console.log(error);
-      this._response.response('Unable to update', 500);
+      return this._response.response('Unable to update', 500);
     }
   }
 }

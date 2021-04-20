@@ -4,6 +4,8 @@ import Service from './Service';
 import StudyService from './Study.service';
 import TechnologyService from './Technology.service';
 import ImageService from './Image.service';
+import CertificateService from './Certificate.service';
+import ProjectService from './Project.service';
 
 export {
   UserService,
@@ -12,4 +14,6 @@ export {
   StudyService,
   TechnologyService,
   ImageService,
+  CertificateService,
+  ProjectService,
 };

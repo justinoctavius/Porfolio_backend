@@ -10,20 +10,23 @@ class Project implements IProject {
   technologies: ITechnology[];
   links: ILink[];
   images: IImage[];
+  user_id: string;
 
   constructor(
     name: string,
     date: Date,
     technologies: ITechnology[],
     images: IImage[],
-    links: ILink[],
-    project_id: string
+    project_id: string,
+    user_id: string,
+    links: ILink[] = []
   ) {
     this.name = name;
     this.date = date;
     this.technologies = technologies;
     this.links = links;
     this.images = images;
+    this.user_id = user_id;
     this.project_id = project_id;
   }
 }

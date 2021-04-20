@@ -1,5 +1,8 @@
 import {
+  CertificateRepository,
   ImageRepository,
+  LinkRepository,
+  ProjectRepository,
   StudyRepository,
   TechnologyRepository,
   UserRepository,
@@ -13,5 +16,8 @@ export {
   StudyRepository,
   TechnologyRepository,
   ImageRepository,
+  CertificateRepository,
+  ProjectRepository,
+  LinkRepository,
 };
 export { IUserRepository, IRepository };

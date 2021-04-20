@@ -22,6 +22,9 @@ container.register({
   studyRoute: asFunction(routes.studyRoute).singleton(),
   techRoute: asFunction(routes.techRoute).singleton(),
   imageRoute: asFunction(routes.imageRoute).singleton(),
+  certificateRoute: asFunction(routes.certificateRoute).singleton(),
+  projectRoute: asFunction(routes.projectRoute).singleton(),
+  linkRoute: asFunction(routes.linkRoute).singleton(),
 });
 
 //controllers
@@ -31,6 +34,9 @@ container.register({
   studyController: asClass(controllers.StudyController).singleton(),
   technologyController: asClass(controllers.TechnologyController).singleton(),
   imageController: asClass(controllers.ImageController).singleton(),
+  certificateController: asClass(controllers.CertificateController).singleton(),
+  projectController: asClass(controllers.ProjectController).singleton(),
+  linkController: asClass(controllers.LinkController).singleton(),
 });
 
 //services
@@ -40,6 +46,9 @@ container.register({
   studyService: asClass(services.StudyService).singleton(),
   technologyService: asClass(services.TechnologyService).singleton(),
   imageService: asClass(services.ImageService).singleton(),
+  certificateService: asClass(services.CertificateService).singleton(),
+  projectService: asClass(services.ProjectService).singleton(),
+  linkService: asClass(services.LinkService).singleton(),
 });
 
 //repositories
@@ -49,6 +58,9 @@ container.register({
   studyRepository: asClass(repository.StudyRepository).singleton(),
   technologyRepository: asClass(repository.TechnologyRepository).singleton(),
   imageRepository: asClass(repository.ImageRepository).singleton(),
+  certificateRepository: asClass(repository.CertificateRepository).singleton(),
+  projectRepository: asClass(repository.ProjectRepository).singleton(),
+  linkRepository: asClass(repository.LinkRepository).singleton(),
 });
 
 //helpers
@@ -63,6 +75,9 @@ container.register({
   studyMapper: asClass(mappers.StudyMapper).singleton(),
   technologyMapper: asClass(mappers.TechnologyMapper).singleton(),
   imageMapper: asClass(mappers.ImageMapper).singleton(),
+  certificateMapper: asClass(mappers.CertificateMapper).singleton(),
+  projectMapper: asClass(mappers.ProjectMapper).singleton(),
+  linkMapper: asClass(mappers.LinkMapper).singleton(),
 });
 
 //app
