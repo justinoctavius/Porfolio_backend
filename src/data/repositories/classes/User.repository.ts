@@ -51,7 +51,6 @@ class UserRepository implements IUserRepository {
       const user = await UserModel.findOne({
         where: { email },
       });
-      console.log(user);
       if (!user) return null;
       return this._userMapper.toDomain(user);
     } catch (error) {

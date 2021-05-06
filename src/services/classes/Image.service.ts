@@ -25,7 +25,7 @@ class ImageService extends Service<IImage> {
       const image = new Image(name, url, v4());
       const imageAdded = await this._repository.addAsync(image);
 
-      //confim changes
+      //confirm changes
       this._imageManagerHelper.commit(url);
       t.commit();
 

@@ -13,7 +13,6 @@ abstract class Repository<T> implements IRepository<T> {
 
   async getAllAsync(): Promise<T[]> {
     const entity = await this._model.findAll({ include: this._include });
-    console.log(entity);
     return entity.map((work) => this._mapper.toDomain(work));
   }
   async getOneAsync(id: string): Promise<T> {

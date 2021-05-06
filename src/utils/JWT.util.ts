@@ -8,6 +8,9 @@ class JWTUtils {
   static async isValid(token) {
     return JWT.verify(token, env.JWT_SECRET);
   }
+  static decode(token) {
+    return JWT.decode(token);
+  }
 }
 
 export default JWTUtils;
