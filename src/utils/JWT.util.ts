@@ -6,7 +6,7 @@ class JWTUtils {
     return JWT.sign(payload, env.JWT_SECRET);
   }
   static async isValid(token) {
-    return JWT.verify(token, env.SECRET);
+    return JWT.verify(token, env.JWT_SECRET);
   }
 }
 

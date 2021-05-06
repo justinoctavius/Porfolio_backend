@@ -40,6 +40,7 @@ class CertificateController implements IController {
   async addAsync(req: Request, res: Response): Promise<void> {
     const { study_id } = req.params;
     const { name, image_id } = req.body;
+    console.log(study_id, name, image_id);
     const response: any = await this._certificateService.addAsync({
       study_id,
       name,

@@ -5,7 +5,7 @@ abstract class Repository<T> implements IRepository<T> {
   protected _model: any;
   protected _mapper: IMapper<T>;
   protected _include: string[];
-  constructor(model: any, mapper: IMapper<T>, include: string[] = []) {
+  constructor(model: any, mapper: IMapper<T>, include = []) {
     this._mapper = mapper;
     this._model = model;
     this._include = include;

@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express, { Router } from 'express';
 
 export default function (routes) {
@@ -7,6 +8,7 @@ export default function (routes) {
   //middleware
   apiRoutes.use(express.json());
   apiRoutes.use(express.static(__dirname + './../src/assets/upload'));
+  apiRoutes.use(cors());
 
   //routes
   setRoutes.use('/user', routes.userRoute);

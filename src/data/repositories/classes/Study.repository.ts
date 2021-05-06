@@ -1,10 +1,14 @@
 import { IStudy } from '../../../domain/entities';
+import CertificateModel from '../../models/Certificate.model';
+import ImageModel from '../../models/Image.model';
 import StudyModel from '../../models/Study.model';
 import Repository from './Repository';
 
 class StudyRepository extends Repository<IStudy> {
   constructor({ studyMapper }) {
-    super(StudyModel, studyMapper);
+    super(StudyModel, studyMapper, [
+      { model: CertificateModel, include: [ImageModel] },
+    ]);
   }
   async addAsync(entity: IStudy): Promise<IStudy> {
     const { study_id, name, description, place, date, user_id } = entity;
