@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:alpine
+    restart: "always"
+    environment: 
+      POSTGRES_PASSWORD: 123
+    ports: 
+      - "5432:5432"
+  porfolio-backend:
+    image: octavius2929/porfolio_backend
+    restart: "always"
+    ports: 
+      - "80:80"
+    depends_on: 
+      - "db"
+    environment: 
+      PORT: 80
+      SECRET: 'lapampara'
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: root
+      ADMIN_EMAIL: admin@gmail.com
+      DATABASE_HOST: "db"
+      DATABASE_PORT: '5432'
+      DATABASE_PASSWORD: '123'
+      DATABASE_USERNAME: 'postgres'
+      DATABASE_NAME: 'plant_pro'
+      DATABASE_URI: 'db:5432'
+      NODE_ENV: 'pro'

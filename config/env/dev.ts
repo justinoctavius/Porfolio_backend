@@ -10,6 +10,7 @@ const dev = {
     PORT: process.env.DATABASE_PORT || '5432',
     PASSWORD: process.env.DATABASE_PASSWORD || '123',
     USER: process.env.DATABASE_USERNAME || 'postgres',
+    FORCE: process.env.DATABASE_FORCE_SYNC || false,
   },
   admin: {
     USERNAME: process.env.ADMIN_USERNAME || 'admin',

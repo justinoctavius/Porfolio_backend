@@ -29,7 +29,7 @@ class Database {
 
   private static async sync() {
     await this.sequelize
-      .sync({ force: false })
+      .sync({ force: env.db.FORCE })
       .catch((error) => console.log(error));
   }
 }
