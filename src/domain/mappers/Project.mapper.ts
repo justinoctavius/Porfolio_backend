@@ -27,7 +27,6 @@ class ProjectMapper implements IMapper<IProject> {
     project_id,
     user_id,
   }): IProject {
-    console.log(images);
     let imagesDomain: IImage[] = this.getImagesDomain(images);
     let technologiesDomain: ITechnology[] = this.getTechnologiesDomain(
       technologies
