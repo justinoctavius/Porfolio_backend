@@ -7,6 +7,7 @@ class Project implements IProject {
   project_id: string;
   name: string;
   date: Date;
+  description: string;
   technologies: ITechnology[];
   links: ILink[];
   images: IImage[];
@@ -15,6 +16,7 @@ class Project implements IProject {
   constructor(
     name: string,
     date: Date,
+    description: string,
     technologies: ITechnology[],
     images: IImage[],
     project_id: string,
@@ -23,6 +25,7 @@ class Project implements IProject {
   ) {
     this.name = name;
     this.date = date;
+    this.description = description;
     this.technologies = technologies;
     this.links = links;
     this.images = images;

@@ -12,10 +12,10 @@ class CertificateMapper implements IMapper<ICertificate> {
     return new Certificate(name, certificate_id, study_id, imageDomain);
   }
   toDto(entity: ICertificate): object {
-    const { name, certificate_id, image } = entity;
+    const { name, certificate_id, image, study_id } = entity;
     let imageDto;
     if (image) imageDto = this._imageMapper.toDto(image);
-    return { name, certificate_id, image: imageDto };
+    return { name, certificate_id, image: imageDto, study_id };
   }
 }
 

@@ -28,7 +28,7 @@ class CertificateModel extends Model implements ICertificateModel {
 
   //study relation
   @ForeignKey(() => StudyModel)
-  @Column({ type: DataType.UUID, allowNull: false })
+  @Column({ type: DataType.UUID, allowNull: false, unique: true })
   study_id: string;
 
   @BelongsTo(() => StudyModel, 'study_id')

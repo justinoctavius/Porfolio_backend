@@ -27,6 +27,9 @@ class ProjectModel extends Model implements IProjectModel {
   @Column({ allowNull: false })
   name: string;
 
+  @Column({ type: DataType.TEXT })
+  description: string;
+
   //link relation
   @HasMany(() => LinkModel)
   links: LinkModel[];

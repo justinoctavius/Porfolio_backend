@@ -16,6 +16,7 @@ class ProjectService extends Service<IProject> {
   async addAsync({
     name,
     date,
+    description,
     images,
     technologies,
     user_id,
@@ -30,6 +31,7 @@ class ProjectService extends Service<IProject> {
         images,
         name,
         date,
+        description,
         user_id
       );
       const projectAdded = await this._repository.addAsync(project);
@@ -39,9 +41,17 @@ class ProjectService extends Service<IProject> {
       return this._response.response('Unable to add', 500);
     }
   }
-  async updateAsync(id: string, { name, date }): Promise<object> {
+  async updateAsync(id: string, { name, date, description }): Promise<object> {
     try {
-      const project = this.getNewProject([], [], name, date, '', id);
+      const project = this.getNewProject(
+        [],
+        [],
+        name,
+        date,
+        description,
+        '',
+        id
+      );
       const projectUpdated = await this._repository.updateAsync(project);
       if (!projectUpdated) {
         return this._response.response('Project not found', 404);
@@ -57,6 +67,7 @@ class ProjectService extends Service<IProject> {
     images: string[],
     name: string,
     date: Date,
+    description: string,
     user_id = '',
     project_id: string = v4()
   ): IProject {
@@ -69,6 +80,7 @@ class ProjectService extends Service<IProject> {
     return new Project(
       name,
       date,
+      description,
       technologiesDomain,
       imagesDomain,
       project_id,

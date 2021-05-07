@@ -8,6 +8,7 @@ interface IProjectModel {
   user_id: string;
   date: Date;
   name: string;
+  description: string;
   links: ILinkModel[];
   images: IImageModel[];
   technologies: ITechnologyModel[];

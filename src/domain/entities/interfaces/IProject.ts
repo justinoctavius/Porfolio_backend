@@ -6,6 +6,7 @@ interface IProject {
   project_id: string;
   name: string;
   date: Date;
+  description: string;
   links: ILink[];
   images: IImage[];
   technologies: ITechnology[];

@@ -9,10 +9,19 @@ class ProjectRepository extends Repository<IProject> {
     super(ProjectModel, projectMapper, ['images', 'links', 'technologies']);
   }
   async addAsync(entity: IProject): Promise<IProject> {
-    const { name, date, project_id, images, technologies, user_id } = entity;
+    const {
+      name,
+      date,
+      description,
+      project_id,
+      images,
+      technologies,
+      user_id,
+    } = entity;
     const project = await this._model.create({
       name,
       date,
+      description,
       project_id,
       user_id,
     });
@@ -29,13 +38,14 @@ class ProjectRepository extends Repository<IProject> {
     return this._mapper.toDomain(project);
   }
   async updateAsync(entity: IProject): Promise<IProject> {
-    const { name, date, project_id } = entity;
+    const { name, date, description, project_id } = entity;
     const project: ProjectModel = await this._model.findByPk(project_id, {
       include: this._include,
     });
     if (!project) return null;
     project.name = name;
     project.date = date;
+    project.description = description;
     await project.save();
     return this._mapper.toDomain(project);
   }

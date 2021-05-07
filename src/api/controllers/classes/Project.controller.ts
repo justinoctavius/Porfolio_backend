@@ -23,20 +23,22 @@ class ProjectController implements IController {
   }
   async updateAsync(req: Request, res: Response): Promise<void> {
     const { project_id } = req.params;
-    const { name, date } = req.body;
+    const { name, date, description } = req.body;
     const response: any = await this._projectService.updateAsync(project_id, {
       name,
       date,
+      description,
     });
     res.status(response.status).json(response);
   }
   async addAsync(req: Request, res: Response): Promise<void> {
     const { user_id } = req.params;
-    const { name, date, images, technologies } = req.body;
+    const { name, date, description, images, technologies } = req.body;
     const response: any = await this._projectService.addAsync({
       user_id,
       name,
       date,
+      description,
       images,
       technologies,
     });

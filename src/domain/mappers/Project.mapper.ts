@@ -20,6 +20,7 @@ class ProjectMapper implements IMapper<IProject> {
   toDomain({
     name,
     date,
+    description,
     technologies,
     images,
     links,
@@ -36,6 +37,7 @@ class ProjectMapper implements IMapper<IProject> {
     return new Project(
       name,
       date,
+      description,
       technologiesDomain,
       imagesDomain,
       project_id,
@@ -69,6 +71,7 @@ class ProjectMapper implements IMapper<IProject> {
     const {
       name,
       date,
+      description,
       images,
       links,
       project_id,
@@ -83,6 +86,7 @@ class ProjectMapper implements IMapper<IProject> {
       project_id,
       name,
       date,
+      description,
       images: imagesDto,
       links: linksDto,
       technologies: technologiesDto,
