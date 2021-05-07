@@ -25,5 +25,4 @@ services:
       DATABASE_PASSWORD: '123'
       DATABASE_USERNAME: 'postgres'
       DATABASE_NAME: 'plant_pro'
-      DATABASE_URI: 'db:5432'
       NODE_ENV: 'pro'
